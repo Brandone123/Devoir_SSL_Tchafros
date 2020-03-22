@@ -109,41 +109,9 @@ body {
     /* box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.9); */
 }
 
-progress[value] {
-    text-align: left;
-    height: 10px;
-    width: 100%;
-
-    -webkit-appearance: none;
-    border: none;
-}
-
-progress:before {
-    content: attr(data-label);
-    font-size: 0.8em;
-    vertical-align: 0
-}
-
-progress::-webkit-progress-bar {
-    background-color: #c9c9c9;
-}
-
-progress::-webkit-progress-value {
-    background-color: #08c487;
-}
-
-progress::-moz-progress-bar {
-    background-color: #08c487;
-}
-
 .row {
     padding-top: 35px;
     padding-bottom: 5px;
-}
-
-.skill-level {
-    padding-left: 30px;
-    width: 60%;
 }
 
 .probox {
@@ -254,61 +222,6 @@ footer {
     padding-top: 15px;
 }
 
-
-#float-btn {
-    position: fixed;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-/*add full-width input fields*/ 
-input[type=text], 
-input[type=password] { 
-    width: 100%; 
-    padding: 12px 20px; 
-    margin: 8px 0; 
-    display: inline-block; 
-    border: 2px solid #ccc; 
-    box-sizing: border-box; 
-} 
-/* set a style for all buttons*/ 
-.contact-me {
-    position: fixed;
-    display: flex;
-    bottom:40px;
-    right:40px;
-    
-}
-
-button { 
-    background-color: #08c487; 
-    color: white; 
-    padding: 14px 20px; 
-    margin: 8px 0; 
-    cursor: pointer; 
-    /* width: 100%;  */
-    border-radius: 5%;
-    font-size: 15px;
-    opacity: 0.7;
-} 
-
-button:hover {
-    background-color: #333;
-}
-
-/*set styles for the cancel button*/ 
-.cancelbtn { 
-    padding: 14px 20px; 
-    background-color: #FF2E00; 
-} 
-/*float cancel and signup buttons and add an equal width*/ 
-.cancelbtn, 
-.signupbtn { 
-    float: left; 
-    width: 50% 
-} 
 /*add padding to container elements*/ 
 .form-container { 
     padding: 16px; 
@@ -453,6 +366,7 @@ button:hover {
               <ol><strong>Intégrité :</strong> el'intégrité des données est assurée par l'utilisation de MACs (Message Authentication Code)</ol>
               <ol><strong>Authentification :</strong> SSL permet l'authentification des 2 entités (authentification client facultative) basé sur des certificats X.509, et l'authentification des données grâce aux MACs.</ol>
            </ul>
+          </p>
         </div>
       </div>
     </div>
@@ -478,7 +392,66 @@ button:hover {
       </div>
     </div>
   </section>
-   <section id="work-experiance">
+  <section id="work-experiance">
+  <div class="container">
+    <div class="row">
+      <div class="tittle">
+        <h1>  Les sous protocole du SSL</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="shodow-box">
+        <div class="expi">
+          <p>Le protocole SSL est constitué de quatre sous-protocoles: <br><br></p>
+          <OL>
+            <LI>Handshake qui permet l'authentification mutuelle du client et serveur, la négociation des algorithmes de chiffrement, de hachage, et l'échange des clés symétriques qui assurent le chiffrement</LI>
+            <LI>le protocole SSL Change Cipher Spec</LI>
+            <LI>le protocole SSL Alert</LI>
+            <LI>le protocole SSL Record</LI>
+          </OL>
+          <P>Les ports utilisés par SSL :</P>
+          <table border="1">
+            <th>protocole</th>
+            <th>ports</th>
+            <tr>
+              <td>HTTPS (HTTP en SSL) </td>
+              <td>443</td>
+            </tr>
+            <tr>
+              <td>SMTPS (SMTP en SSL) </td>
+              <td>465 </td>
+            </tr>
+            <tr>
+              <td>NNTPS   </td>
+              <td>563</td>
+            </tr>
+            <tr>
+              <td>LDAPS (LDAP en SSL) </td>
+              <td>  636</td>
+            </tr>
+            <tr>
+              <td>POP3S   </td>
+              <td>995</td>
+            </tr>
+            <tr>
+              <td>IMAPS   </td>
+              <td>995</td>
+            </tr>
+            <tr>
+              <td>TELNETS   </td>
+              <td>992</td>
+            </tr>
+          </table><br> 
+          <P>
+            En pratique, pour accéder à un serveur qui utilise les services SSL,
+             on ajoute un "s" lors de la spécification du protocole. Exemple : https://www.monserveur.com
+          </P> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section id="work-experiance">
     <div class="container">
       <div class="row">
         <div class="tittle">
@@ -489,42 +462,35 @@ button:hover {
         <div class="shodow-box">
           <div class="expi">
            <ul>
-			<li>SSL est théoriquement vulnérable aux attaques par force brute en cas d'utilisation de clés 40
-bits, il est donc conseillé d'utiliser des clés de 128 bits.</li>
-			<li>SSL est très vulnérable aux attaques par le milieu (man in the middle)</li>
-			<li>SSL est faible dans le sens où il n'impose pas l'authentification client (ce serait d'ailleurs
-difficilement gérable en pratique).</li>
-			<li>SSL est faible enfin car il présente des souplesses dans son implémentation, notamment en ce
-qui concerne la vérification des certificats des serveurs.</li>
-			<li>SSL est éventuellement vulnérable à des attaques plus poussées, basées sur des propriétés
-cryptographiques.</li>
-		   </ul>
+            <li>SSL est théoriquement vulnérable aux attaques par force brute en cas d'utilisation de clés 40 bits, il est donc conseillé d'utiliser des clés de 128 bits.</li>
+            <li>SSL est très vulnérable aux attaques par le milieu (man in the middle)</li>
+            <li>SSL est faible dans le sens où il n'impose pas l'authentification client (ce serait d'ailleurs difficilement gérable en pratique).</li>
+            <li>SSL est faible enfin car il présente des souplesses dans son implémentation, notamment en ce qui concerne la vérification des certificats des serveurs.</li>
+            <li>SSL est éventuellement vulnérable à des attaques plus poussées, basées sur des propriétés cryptographiques.</li>
+          </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section id="bio-data">
-    <div class="container">
-      <div class="bio">
-        <div class="biodata">
-          <div class="details">
-            <div class="heading">
-              <h1> Conclusion</h1>
-            </div>
-            <p class="bioD">
-	Le protocole SSL est actuellement le seul protocole de sécurisation déployé et utilisé à grande échelle,
-		son grand avantage étant sa transparence par rapport au protocole TCP. Il garantit l'authentification,
-		la confidentialité et l'intégrité des données. Avec son architecture modulaire, il ne se limite pas à des
-		applications traditionnelles, puisqu’il intègre les réseaux sans fil comme le WAP (Wireless Transport
-		Layer) sous le nom WTLS (Wireless Transport Layer Security).
-	 </p>
-          
-        </div>
-
-      </div>
+<section id="work-experiance">
+  <div class="container">
+   <div class="row">
+    <div class="tittle">
+        <h1> Conclusion</h1>
     </div>
-  </section>
+    <div class="row">
+      <div class="shodow-box">
+        <div class="expi">
+            <p class="bioD">
+            Le protocole SSL est actuellement le seul protocole de sécurisation déployé et utilisé à grande échelle, son grand avantage étant sa transparence par rapport au protocole TCP. Il garantit l'authentification, la confidentialité et l'intégrité des données. Avec son architecture modulaire, il ne se limite pas à des applications traditionnelles, puisqu’il intègre les réseaux sans fil comme le WAP (Wireless Transport Layer) sous le nom WTLS (Wireless Transport Layer Security).
+             </p>
+        </div>
+     </div> 
+    </div>    
+   </div>
+  </div>
+</section>
 <section id="work-experiance">
     <div class="container">
       <div class="row">
